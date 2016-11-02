@@ -10,20 +10,18 @@ import java.util.Scanner;
 
 public class ex03 {
 
+	private static int i;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner scn = new Scanner(System.in);
-		String m = scn.next();
-		System.out.print( decomp(m) );
+		decomp();
 	}
-	public static String decomp( String m ) {
-		String[]name=m.split("");
-		String x = " ";
-		for(int i=1;i<=m.length()+1;i++){
-			x=x+name[i];
-			x=x+" ";
+	public static void decomp() {
+		Scanner scn =  new Scanner(System.in);
+		String str = scn.next(); 
+		char data [ ] = str.toCharArray();
+		for(int i=0;i<data.length;i++){
+			System.out.print(data[i]+"\t");
 		}
-		m=x;
-		return m;
+		System.out.println();
 	}
 }
